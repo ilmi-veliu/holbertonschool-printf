@@ -2,7 +2,7 @@
 
 int i = 0;
 
-void print_char (va_list args, char *format)
+int  print_char (va_list args, char *format)
 
 {
 	if (!format)
@@ -14,7 +14,7 @@ void print_char (va_list args, char *format)
 		i++;
 	}	
 }
-void print_string(va_list args, char *format)
+int print_string(va_list args, char *format)
 {
 	if (!format)
 	return;
@@ -26,7 +26,8 @@ void print_string(va_list args, char *format)
 	}	
 }
 
-void print_mod(va_list args, char *format)
+int print_mod(va_list args, char *format)
+
 {
 	if (!format)
 	return;
@@ -38,7 +39,14 @@ void print_mod(va_list args, char *format)
 	}	
 }
 
-void negatif(int)
+int print_entier (va_list args, char *format)
 {
-	
+	if (!format)
+	return;
+
+	while (format[i])
+	{
+		_putchar(i);
+		i++;
+	}
 }

@@ -11,7 +11,8 @@ int _putchar(char c);
 
 typedef struct panda
 {
-	int (*fptr)(int, int);		
+	char *specifier;
+	void (*fptr)(va_list);
 } op_t;
 
 
