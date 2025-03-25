@@ -37,3 +37,8 @@ void print_mod(va_list args, char *format)
 		i++;
 	}	
 }
+
+void negatif(int)
+{
+	
+}
