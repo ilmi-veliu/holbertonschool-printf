@@ -2,7 +2,7 @@
 
 int i = 0;
 
-int  print_char (va_list args, char *format)
+int print_char (va_list args, char *format)
 
 {
 	if (!format)
@@ -27,7 +27,6 @@ int print_string(va_list args, char *format)
 }
 
 int print_mod(va_list args, char *format)
-
 {
 	if (!format)
 	return;
@@ -39,7 +38,7 @@ int print_mod(va_list args, char *format)
 	}	
 }
 
-int print_entier (va_list args, char *format)
+int print_entier(va_list args, char *format)
 {
 	if (!format)
 	return;
@@ -48,5 +47,5 @@ int print_entier (va_list args, char *format)
 	{
 		_putchar(i);
 		i++;
-	}
+	}	
 }
