@@ -2,18 +2,22 @@
 #define MAIN_H
 
 #include <stdarg.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int _printf(const char *format, ...);
-void print_char (va_list args, char *format);
-void print_string(va_list args, char *format);
-void print_mod(va_list args, char *format);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_mod(va_list args);
+int print_entier(va_list args);
 int _putchar(char c);
+int verif_spec(const char *format, unsigned int *i, va_list args);
 
 typedef struct panda
 {
-	int (*fptr)(int, int);		
+	char *specifier;
+	int (*f)(va_list);	
 } op_t;
-
-
 
 #endif
