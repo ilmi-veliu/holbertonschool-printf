@@ -9,15 +9,14 @@ int (*get_op_func(char *s))(int, int)
     	{"%", print_mod},
     	{NULL, NULL}
 };
-
+int i;
 {
-	for (i = 0; verif_carac[i].symbol != NULL; i++)
+	for (i = 0; verif_carac[i].specifier != NULL; i++)
 	{
-		if (verif_carac[i].symbol == *s)
+		if (verif_carac[i].specifier == *s)
 		{
-			return (verif_carac[i].func);
+			return (verif_carac[i].f);
 		}
 	}
 	return NULL;
 }
-
