@@ -1,18 +1,35 @@
 #include "main.h"
 
-int print_string(va_list, args)
-{
-	char *str = va_args(args, char*);
+/**
+ * print_all - prints anything
+ * @format: list of types of arguments passed to the function
+ *
+ * Return: number of characters printed
+ */
+	va_list args;
 
-	int i = 0, count = 0;
+int print_string(va_list args)
+{
+	char *str = va_arg(args, char *);
+	int i;
 
 	if (!str)
-	str = NULL
+	str = "(null)";
 
-	while str[i]
-	{
-		_putchar(str[i])
-		count++;
-		i++;
-	}
-	return count;
+	for (i = 0; str[i]; i++)
+	_putchar(str[i]);
+
+	return (i);
+}
+
+int print_char (va_list args)
+{
+	char c = va_arg (args ,int);
+	return ( _putchar (c));
+}
+
+ int print_percent (va_list args)
+ {
+	(void)args;
+	return(_putchar('%'));
+}
