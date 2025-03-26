@@ -10,8 +10,14 @@ int (*get_op_func(char *s))(int, int)
     	{NULL, NULL}
 };
 
-int sdcaeqscqs(sdczes)
 {
-	for (i = 0; format[i] != "\0"; i++)
+	for (i = 0; verif_carac[i].symbol != NULL; i++)
 	{
-		if (i
+		if (verif_carac[i].symbol == *s)
+		{
+			return (verif_carac[i].func);
+		}
+	}
+	return NULL;
+}
+
