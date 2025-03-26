@@ -13,7 +13,7 @@ int print_mod(va_list args);
 int print_entier(va_list args);
 int _putchar(char c);
 int verif_spec(const char *format, unsigned int *i, va_list args);
-
+int (*get_op_func(char *s))(int, int)
 typedef struct panda
 {
 	char *specifier;
