@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * get_op_func - Recherche la fonction correspondant à un spécificateur.
+ * @s: Spécificateur à rechercher.
+ *
+ * Return: Pointeur vers la fonction correspondante, ou NULL si non trouvé.
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	op_t verif_carac[] = {
@@ -7,11 +13,12 @@ int (*get_op_func(char *s))(int, int)
 	{"d", print_entier},
 	{"i", print_entier},
 	{"%", print_mod},
-    	{NULL, NULL}
+	{NULL, NULL}
 };
 int i;
 int verif_spec(const char *format, unsigned int *i, va_list args);
 {
+	/* Vérification de chaque spécificateur */
 	for (i = 0; verif_carac[i].specifier != NULL; i++)
 	{
 		if (verif_carac[i].specifier == *s)
@@ -19,5 +26,6 @@ int verif_spec(const char *format, unsigned int *i, va_list args);
 			return (verif_carac[i].f);
 		}
 	}
-	return NULL;
+	/* Retourne NULL si aucun spécificateur correspondant n'est trouvé */
+	return (NULL);
 }
