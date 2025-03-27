@@ -8,40 +8,37 @@
  */
 int _printf(const char *format, ...)
 {
-	va_list args;
-	int count_char = 0;
-	int i = 0;
-	int (*func)(va_list);
+	    va_list args;
+    unsigned int i = 0, count = 0;
+    int (*f)(va_list);
 
-	if (format == NULL)
+    if (format == NULL)
 	return (-1);
 
-	va_start(args, format);
+    va_start(args, format);
 
-	while (format[i] != '\0')
+    while (format[i])
+    {
+	if (format[i] == '%')
 	{
-		if (format[i] == '%')
-		{
-			i++;
-		if (format[i] == '\0')
-		return (-1);
-
-		func = get_op_func((char *)&format[i]);
-		if (func)
-		count_char += func(args);
-		else
-		{
-		count_char += _putchar('%');
-		count_char += _putchar(format[i]);
-		}
-		}
-		else
-		{
-		count_char += _putchar(format[i]);
-		}
+	    f = get_op_func(&format[i + 1]);
+	    if (f != NULL)
+	    {
+		count += f(args);
 		i++;
+	    }
+	    else
+	    {
+		count += _putchar(format[i]);
+	    }
 	}
+	else
+	{
+	    count += _putchar(format[i]);
+	}
+	i++;
+    }
 
-	va_end(args);
-	return (count_char);
+    va_end(args);
+    return (count);
 }
