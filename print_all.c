@@ -108,5 +108,5 @@ int print_decimal(va_list args)
  */
 int print_entier(va_list args)
 {
-	return (print_decimal);
+	return (print_decimal(args));
 }

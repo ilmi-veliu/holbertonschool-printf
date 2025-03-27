@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 int _printf(const char *format, ...);
 int print_char(va_list args);
@@ -13,7 +14,7 @@ int print_percent(va_list args);
 int print_decimal(va_list args);
 int _putchar(char c);
 int verif_spec(const char *format, unsigned int *i, va_list args);
-int (*get_op_func(char *s))(int, int);
+int (*get_op_func(const char *s))(va_list);
 int print_entier(va_list args);
 /**
  * struct panda - Structure associant un spécificateur à une fonction.
@@ -21,7 +22,7 @@ int print_entier(va_list args);
  * @f: Pointeur vers la fonction correspondante prenant va_list en paramètrs
  *
  * Description: Cette structure est utilisée pour associer un spécificate
- * de format à une fonction qui effectue l'affichage appropri�
+ * de format à une fonction qui effectue l'affichage appropri�
  */
 typedef struct panda
 {
