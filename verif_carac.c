@@ -12,7 +12,7 @@ int (*get_op_func(char *s))(int, int)
 	{"s", print_string},
 	{"d", print_entier},
 	{"i", print_entier},
-	{"%", print_mod},
+	{"%", print_percent},
 	{NULL, NULL}
 };
 int i;
