@@ -1,9 +1,6 @@
 #include "main.h"
 /**
- * verif_carac - Tableau des spécifieurs de format et d fonctions associées
- *
- * Ce tableau associe chaque spécifieur (`%c`, `%s`, `%d`, etc.) la fonction
- * qui permet de l'afficher correctement.
+ * verif_carac - Tableau des spécifieurs et de leurs fonctions associées
  */
 op_t verif_carac[] = {
 		{'c', print_char},
