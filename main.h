@@ -17,12 +17,12 @@ int verif_spe(const char *format, unsigned int *i, va_list args);
 int print_entier(va_list args);
 int _print_deux(const char *format, int *i, va_list args);
 /**
- * struct panda - Structure associant un spécificateur à une fonction.
- * @specifier: Chaîne représentant le spécificateur (ex: "c", "s", "d").
- * @f: Pointeur vers la fonction correspondante prenant va_list en paramètrs
+ * struct op - Structure associant un spécificateur à une fonction.
+ * @spe: Caractère représentant le spécificateur (ex: 'c', 's', 'd').
+ * @f: Pointeur vers la fonction correspondante prenant va_list en paramètre.
  *
- * Description: Cette structure est utilisée pour associer un spécificate
- * de format à une fonction qui effectue l'affichage appropri�
+ * Description: Cette structure est utilisée pour associer un spécificateur
+ * de format à une fonction qui effectue l'affichage approprié.
  */
 typedef struct op
 {
