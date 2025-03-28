@@ -15,6 +15,7 @@ int print_decimal(va_list args);
 int _putchar(char c);
 int verif_spe(const char *format, unsigned int *i, va_list args);
 int print_entier(va_list args);
+int _print_deux(const char *format, int *i, va_list args);
 /**
  * struct panda - Structure associant un spécificateur à une fonction.
  * @specifier: Chaîne représentant le spécificateur (ex: "c", "s", "d").
