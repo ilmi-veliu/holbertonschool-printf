@@ -1,48 +1,48 @@
-# README
+📌 Projet _printf
+📖 Introduction
+Ce projet implémente une version personnalisée de la fonction printf en C. L'objectif est de mieux comprendre le fonctionnement des arguments variadiques et la gestion des spécifieurs de format.
 
-## Introduction
-Ce projet implémente une version simplifiée de la fonction `printf` en C. L'objectif est de comprendre le fonctionnement de cette fonction et de gérer différents spécifieurs de format.
+📂 Structure du Projet
+Le projet est organisé en plusieurs fichiers :
 
-## Description
-Ce projet contient plusieurs fichiers sources :
+Fichier	Description
+main.h	Contient les prototypes des fonctions utilisées.
+_putchar.c	Implémente la fonction _putchar pour afficher un caractère.
+_printf.c	Contient l’implémentation principale de _printf.
+get_function.c	Sélectionne la bonne fonction en fonction du spécifieur.
+⚙️ Fonctionnalités
+Notre _printf prend en charge plusieurs fonctionnalités :
+✅ Affichage des nombres entiers (%d, %i).
+✅ Affichage des caractères (%c).
+✅ Affichage des chaînes de caractères (%s).
+✅ Affichage des adresses mémoire (%p).
+✅ Prise en charge des arguments variadiques (va_list, va_arg).
+✅ Gestion des formats binaires, octaux et hexadécimaux.
+✅ Manipulation des chaînes (inversion, encodage ROT13).
 
-- **`print_all.c`** : Gère l'affichage des différents types de données.
-- **`_putchar.c`** : Implémente une fonction `_putchar` pour afficher un caractère.
-- **`main.h`** : Contient les prototypes des fonctions utilisées.
-- **`verif_carac.c`** : Vérifie les caractères et leur validité.
-- **`_printf.c`** : Implémente la fonction principale `_printf`.
+🚀 Compilation et Restrictions
+Le projet doit être compilé avec les options suivantes :
 
-## Compilation
-Utilisez la commande suivante pour compiler le projet :
+sh
+Copier
+Modifier
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+Contraintes :
+🔹 Maximum 5 fonctions par fichier.
+🔹 Pas de variables globales.
+🔹 Seules les fonctions write et malloc sont autorisées.
 
-```sh
-$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
-```
+🛠 Technologies Utilisées
+C	GCC	Git	Vim	Linux
+📜 Man Page
+Pour afficher la documentation de _printf, utilisez :
 
-## Contraintes
-- Aucun fichier temporaire (exécutables, fichiers de configuration, etc.) ne doit être présent dans le dépôt.
-- Les commits seront analysés pour assurer une bonne gestion du versionnement.
-- Le code doit respecter les normes de style Betty.
-- Les noms des variables et des fonctions doivent être explicites.
-
-## Spécifieurs gérés
-Le `_printf` implémente les spécifieurs suivants :
-- `%c` : Affiche un caractère.
-- `%s` : Affiche une chaîne de caractères.
-- `%d` et `%i` : Affichent des entiers en base 10.
-- `%%` : Affiche le caractère `%`.
-
-- ## Explication du code par un FlowChart
-- ![Diagramme de flux](https://github.com/user-attachments/assets/5266e9a6-d130-44c3-817b-08843873c8cf)
-
-
-## Collaborateurs
-- **Tom Lagarde**
-- **Ilmi Veliu**
-
-## Man Page
-Utilisation de `_printf` :
-```sh
+sh
+Copier
+Modifier
 man _printf
-```
+🤝 Collaborateurs
+Tom Lagarde
+
+Ilmi Veliu
 
