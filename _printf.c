@@ -37,6 +37,7 @@ int _printf(const char *format, ...)
 }
 
 /**
+ * _print_deux - deuxieme partie de la fonction principale
  * handle_specifier - Gère un spécificateur de format.
  * @format: La chaîne de format.
  * @i: Pointeur vers l'index actuel dans la chaîne de format.

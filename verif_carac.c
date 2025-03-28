@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * verif_carac - Tableau des spécifieurs de format et de leurs fonctions associées
+ *
+ * Ce tableau associe chaque spécifieur (`%c`, `%s`, `%d`, etc.) à la fonction
+ * qui permet de l'afficher correctement.
+ */
 op_t verif_carac[] = {
 		{'c', print_char},
 		{'s', print_string},
@@ -10,7 +15,14 @@ op_t verif_carac[] = {
 	};
 
 
-
+/**
+ * verif_spe - Vérifie et applique un spécifieur de format
+ * @format: Chaîne de format
+ * @i: Index actuel dans la chaîne
+ * @args: Liste des arguments variadiques
+ *
+ * Retourne le nombre de caractères affichés.
+ */
 int verif_spe(const char *format, unsigned int *i, va_list args)
 {
 	int j, count = 0;
