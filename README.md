@@ -1,5 +1,7 @@
 # 📌 Projet `_printf`
 
+Nous sommes heureux aujourd'hui de vous présenter notre premier projet collaboratif !
+
 ## 📖 Introduction  
 Ce projet implémente une version personnalisée de la fonction `printf` en C. L'objectif est de mieux comprendre le fonctionnement des arguments variadiques et la gestion des spécifieurs de format.  
 
@@ -11,8 +13,8 @@ Le projet est organisé en plusieurs fichiers :
 | `main.h`          | Contient les prototypes des fonctions utilisées. |
 | `_putchar.c`      | Implémente la fonction `_putchar` pour afficher un caractère. |
 | `_printf.c`       | Contient l’implémentation principale de `_printf`. |
-| `get_function.c`  | Sélectionne la bonne fonction en fonction du spécifieur. |
-
+| `verif_carac.c`  | Sélectionne la bonne fonction en fonction du spécifieur. |
+| `print_all.c`     | Contient les fonctions qui serviront à imprimer les caractères |
 ## ⚙️ Fonctionnalités  
 Notre `_printf` prend en charge plusieurs fonctionnalités :  
 
@@ -51,8 +53,8 @@ man _printf
 
 | Nom           | GitHub                 | Rôle |
 |--------------|-----------------------|------|
-| **Tom Lagarde** | [@TomLagarde](https://github.com/TomLagarde) | Développeur |
-| **Ilmi Veliu**  | [@IlmiVeliu](https://github.com/IlmiVeliu)  | Développeur |
+| **Tom Lagarde** | [@TomLagarde](https://github.com/tmlgde) | Futur Développeur |
+| **Ilmi Veliu**  | [@IlmiVeliu](https://github.com/ilmi-veliu)  | Futur Développeur |
 
 💡 **Contributions** :  
 ✅ Développement de `_printf`  
