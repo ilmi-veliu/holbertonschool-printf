@@ -1,0 +1,74 @@
+.TH _PRINTF 1 "Mars 2025" "Version 1.0" "Manuel utilisateur"
+
+.SH NOM
+_printf - Fonction personnalisée de formatage et d'affichage
+
+.SH SYNOPSIS
+.B #include "main.h"
+.br
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+La fonction
+.B _printf
+est une implémentation personnalisée de la fonction standard printf. Elle permet d'afficher du texte formaté sur la sortie standard.
+
+.SH PARAMÈTRES
+.B format
+.RS 4
+Chaîne de format contenant du texte et des spécifieurs de conversion.
+.RE
+
+.SH SPÉCIFIEURS GÉRÉS
+.B _printf
+prend en charge les spécifieurs suivants :
+.TP
+.B %c
+Affiche un caractère.
+.TP
+.B %s
+Affiche une chaîne de caractères.
+.TP
+.B %d, %i
+Affiche un entier en base 10.
+.TP
+.B %%
+Affiche le caractère %.
+
+.SH FICHIERS DU PROJET
+Le projet est composé des fichiers suivants :
+.TP
+.B print_all.c
+Gère l'affichage des différents types de données.
+.TP
+.B _putchar.c
+Implémente une fonction _putchar pour afficher un caractère.
+.TP
+.B main.h
+Contient les prototypes des fonctions utilisées.
+.TP
+.B verif_carac.c
+Vérifie les caractères et leur validité.
+.TP
+.B _printf.c
+Implémente la fonction principale _printf.
+
+.SH VALEUR DE RETOUR
+La fonction
+.B _printf
+retourne le nombre de caractères imprimés, ou -1 en cas d'erreur.
+
+.SH EXEMPLE
+.EX
+_printf("Hello %s!", "world");
+.EE
+Affichera :
+.EX
+Hello world!
+.EE
+
+.SH AUTEURS
+Tom Lagarde, Ilmi Veliu
+
+.SH VOIR AUSSI
+.BR printf (3)
