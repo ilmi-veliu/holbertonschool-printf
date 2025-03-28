@@ -24,7 +24,7 @@ int _print_deux(const char *format, int *i, va_list args);
  * Description: Cette structure est utilisée pour associer un spécificate
  * de format à une fonction qui effectue l'affichage appropri�
  */
-typedef struct panda
+typedef struct op
 {
 	char spe;
 	int (*f)(va_list);
