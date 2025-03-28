@@ -1,8 +1,8 @@
 #include "main.h"
 
-/
- 
-verif_carac - Tableau des spécifieurs et de leurs fonctions associées*/
+/**
+ * verif_carac - Tableau des spécifieurs et de leurs fonctions associées
+ */
 op_t verif_carac[] = {
     {'c', print_char},
     {'s', print_string},
@@ -12,14 +12,15 @@ op_t verif_carac[] = {
     {'\0', NULL}
 };
 
-/
- 
-verif_spe - Vérifie et applique un spécifieur de format
-@format: Chaîne de format
-@i: Index actuel dans la chaîne
-@args: Liste des arguments variadiques*
-Return: Le nombre de caractères affichés.*/
-int verif_spe(const char format, unsigned inti, va_list args)
+/**
+ * verif_spe - Vérifie et applique un spécifieur de format
+ * @format: Chaîne de format
+ * @i: Index actuel dans la chaîne
+ * @args: Liste des arguments variadiques
+ *
+ * Return: Le nombre de caractères affichés.
+ */
+int verif_spe(const char *format, unsigned int i, va_list args)
 {
     int j, count = 0;
 
