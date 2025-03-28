@@ -26,8 +26,6 @@ Notre `_printf` prend en charge plusieurs fonctionnalités :
 
 ## 🚀 Compilation et Restrictions  
 Le projet doit être compilé avec les options suivantes :  
-
-```sh
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ## ⚠️ Contraintes et Technologies  
 
@@ -47,7 +45,6 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 ## 📜 Man Page  
 
-```sh
 man _printf
 
 ## 🤝 Collaborateurs  
