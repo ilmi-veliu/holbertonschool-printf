@@ -21,7 +21,7 @@ op_t verif_carac[] = {
  * @i: Index actuel dans la chaîne
  * @args: Liste des arguments variadiques
  *
- * Retourne le nombre de caractères affichés.
+ * Return:  le nombre de caractères affichés.
  */
 int verif_spe(const char *format, unsigned int *i, va_list args)
 {
