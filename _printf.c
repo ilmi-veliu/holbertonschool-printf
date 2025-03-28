@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - Fonction qui imite le comportement de printf.
  * @format: La chaîne de format contenant les spécificateurs.
@@ -11,6 +10,7 @@ int	_printf(const char *format, ...)
 	va_list args;
 	int count = 0, i = 0;
 	int (*f)(va_list);
+	int j;
 
 	if (format == NULL)
 		return (-1);
@@ -25,7 +25,16 @@ int	_printf(const char *format, ...)
 			if (format[i] == '\0')
 				return (-1);
 
-			f = get_op_func(&format[i]);
+			f = NULL;
+			for (int j = 0; verif_carac[j].spe != '\0'; j++)
+			{
+				if (verif_carac[j].spe == format[i])
+				{
+					f = verif_carac[j].f;
+					break;
+				}
+			
+			}
 			if (f != NULL)
 			{
 				count += f(args);
@@ -37,6 +46,7 @@ int	_printf(const char *format, ...)
 					count += _putchar(format[i]);
 			}
 		}
+			
 		else
 		{
 			count += _putchar(format[i]);

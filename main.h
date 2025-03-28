@@ -13,8 +13,7 @@ int print_string(va_list args);
 int print_percent(va_list args);
 int print_decimal(va_list args);
 int _putchar(char c);
-int verif_spec(const char *format, unsigned int *i, va_list args);
-int (*get_op_func(const char *s))(va_list);
+int verif_spe(const char *format, unsigned int *i, va_list args);
 int print_entier(va_list args);
 /**
  * struct panda - Structure associant un spécificateur à une fonction.
@@ -26,8 +25,8 @@ int print_entier(va_list args);
  */
 typedef struct panda
 {
-	char *specifier;
+	char spe;
 	int (*f)(va_list);
 } op_t;
-
+extern op_t verif_carac[];
 #endif
