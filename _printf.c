@@ -26,7 +26,7 @@ int	_printf(const char *format, ...)
 				return (-1);
 
 			f = NULL;
-			for (int j = 0; verif_carac[j].spe != '\0'; j++)
+			for (j = 0; verif_carac[j].spe != '\0'; j++)
 			{
 				if (verif_carac[j].spe == format[i])
 				{
