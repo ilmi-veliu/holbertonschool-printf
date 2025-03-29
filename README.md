@@ -43,6 +43,11 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ![Vim](https://img.shields.io/badge/VIM-019733?style=for-the-badge&logo=vim&logoColor=white)  
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)  
 
+## 📂Flowchart
+
+![Diagramme de flux (1)](https://github.com/user-attachments/assets/bc0d7d78-fcc3-41df-9af5-b79f5ac0369c)
+
+
 ---
 
 ## 📜 Man Page  
