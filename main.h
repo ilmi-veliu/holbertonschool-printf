@@ -27,11 +27,8 @@ int _print_deux(const char *format, int *i, va_list args);
  */
 typedef struct op
 {
-    char spe;
-    int (*f)(va_list);
+	char spe;
+	int (*f)(va_list);
 } op_t;
-
-/* Déclaration du tableau verif_carac[] */
-extern op_t verif_carac[];
 
 #endif /* MAIN_H */
