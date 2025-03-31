@@ -31,4 +31,5 @@ typedef struct op
 	int (*f)(va_list);
 } op_t;
 
+extern op_t verif_carac[];
 #endif /* MAIN_H */

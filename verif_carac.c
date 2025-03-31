@@ -1,6 +1,6 @@
 #include "main.h"
 
-static op_t verif_carac[] = {
+op_t verif_carac[] = {
 	{'c', print_char},
 	{'s', print_string},
 	{'%', print_percent},
